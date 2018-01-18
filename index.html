@@ -1,11 +1,24 @@
-<?php require("includes/helpers.php"); ?>
-<?php require("plugins/Mobile-Detect-2.8.11/Mobile_Detect.php");
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Georgia Vompiri - Civil Engineer in the Netherlands </title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/jqueryUI/jquery-ui.min.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/contactform.js"></script>
+    <script type="text/javascript" src="js/smoothScroll.js"></script>
+    <link rel="stylesheet" href="css/foundation.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="plugins/font-awesome-4.2.0/css/font-awesome.min.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek' rel='stylesheet'
+          type='text/css'>
+    <link rel="shortcut icon" href="img/logo-black-favicon.ico">
 
-$detect = new Mobile_Detect();
-?>
-
-
-<?php render("header", ["title" => "Georgia Vompiri - Civil Engineer in the Netherlands"]); ?>
+</head>
+<body>
 
 	<!-----	Google analytics code -------------------------------------------------->
 			
@@ -98,17 +111,13 @@ $detect = new Mobile_Detect();
 <!--About-------------------------------------------------------------------------------------------------------------->
     <section class="row" id="about">
 
-        <?php if ($detect->isMobile()) { ?>
-
-            <div class="small-12 columns full-CV-small-screen">
+            <div class="small-12 columns full-CV-small-screen show-for-small-only">
                 <p> Download my full <a href="files/cv.pdf">CV</a>
                     <a href="files/cv.pdf"><span class="fa fa-file-pdf-o"></span></a>
                 </p>
             </div>
 
-        <?php } else { ?>
-
-            <div id="CV" class="reveal-modal" data-reveal>
+            <div id="CV" class="reveal-modal show-for-medium-up" data-reveal>
                 <iframe src="files/cv.pdf#view=fitH" width="100%" height="100%">
                 </iframe>
                 <a class="close-reveal-modal" id="close-modal-CV">&#215;</a>
@@ -122,8 +131,6 @@ $detect = new Mobile_Detect();
                     <a href="#" data-reveal-id="CV"><span class="fa fa-file-pdf-o"></span></a>
                 </p>
             </div>
-
-        <?php } ?>
 
         <div class="small-12 columns education-experience-languages">
             <div class="small-12 medium-12 large-4 columns fa-about pad0" id="education">
@@ -478,4 +485,7 @@ $detect = new Mobile_Detect();
             shortly!</p></div>
     <div id="failureMessage" class="statusMessage large-4 medium-6 small-12 columns"><p>There was a problem. Please try
             again.</p></div>
-<?php render("footer"); ?>
+<script src="js/foundation.min.js"></script>
+<script> $(document).foundation(); </script>
+</body>
+</html>
